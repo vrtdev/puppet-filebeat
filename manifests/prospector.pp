@@ -29,7 +29,7 @@ define filebeat::prospector (
   Boolean $close_eof                = false,
   Integer $clean_inactive           = 0,
   Boolean $clean_removed            = true,
-  Integer $close_timeout            = 0,
+  Variant[Integer,String] $close_timeout = 0,
   Boolean $force_close_files        = false,
   Array[String] $include_lines      = [],
   Array[String] $exclude_lines      = [],
